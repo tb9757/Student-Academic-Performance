@@ -1,12 +1,12 @@
-# Project XYZ
+# Student Academic Performance
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+**Student Academic Performance** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Dataset Content
 
--   Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+-   This is a synthetic dataset containing student academic metrics for 2000 individual pupils. The dataset includes attendance, internal exam scores, assignment performance, daily study habits, and final exam marks. The dataset can be used to the predict Final Exam Marks based on academic indicators.
 
 ## Business Requirements
 
