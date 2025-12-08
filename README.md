@@ -15,14 +15,18 @@
 ## Hypothesis and how to validate?
 
 -   List here your project hypothesis(es) and how you envision validating it (them)
--   H1: Average internal test score is more strongly correlated with final exam marks than attendance rate.
+-   Hypothesis 1: Average internal test score is more strongly correlated with final exam marks than attendance rate.
 
 This hypothesis asks the question, is showing up consistently more importand than already being good at the subject? It is comparing engagement and consistency with academic ability and prior knowledge.
 I will validate this by calculating the pearson correlation for both final test scores and attendance and final test scores and average internal test scores.
 
--   H2: Average internal test scores, which represent prior academic performance, explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
+-   Hypothesis 2: Average internal test scores, which represent prior academic performance, explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
 
 This hypothesis can be tested using regression tp see which variables contribute more strongly
+
+-   Hypothesis 3: Students studying more than 3 hours score significantly higher than those below the threshold.
+
+-   Hypothesis 4: A fully processed regression pipeline achieves better accuracy than a model without preprocessing.
 
 ## Project Plan
 
