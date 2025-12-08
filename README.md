@@ -15,6 +15,7 @@
 ## Hypothesis and how to validate?
 
 -   List here your project hypothesis(es) and how you envision validating it (them)
+-   H1: Average internal test score is more strongly correlated with final exam marks than attendance rate.
 
 ## Project Plan
 
