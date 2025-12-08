@@ -20,6 +20,10 @@
 This hypothesis asks the question, is showing up consistently more importand than already being good at the subject? It is comparing engagement and consistency with academic ability and prior knowledge.
 I will validate this by calculating the pearson correlation for both final test scores and attendance and final test scores and average internal test scores.
 
+-   H2: Average internal test scores, which represent prior academic performance, explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
+
+This hypothesis can be tested using regression tp see which variables contribute more strongly
+
 ## Project Plan
 
 -   Outline the high-level steps taken for the analysis.
