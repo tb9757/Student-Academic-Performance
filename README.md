@@ -18,19 +18,29 @@
 
 ## Hypothesis and how to validate?
 
--   List here your project hypothesis(es) and how you envision validating it (them)
--   Hypothesis 1: Average internal test score is more strongly correlated with final exam mark than attendance.
+**Hypothesis 1:** Average internal test score is more strongly correlated with final exam mark than attendance.
 
-This hypothesis asks the question, is showing up consistently more importand than already being good at the subject? It is comparing engagement and consistency with academic ability and prior knowledge.
-I will validate this by calculating the pearson correlation for both final test scores and attendance and final test scores and average internal test scores.
+This hypothesis addresses the importance of being consistently in school versus performing well in internal assessments. It is comparing engagement and consistency with academic ability and prior knowledge.
+I will validate this by comparing correlation coefficients for:
 
--   Hypothesis 2: Average internal test scores (prior academic performance) explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
+-   Attendance and final test scores.
+-   Average internal test scores and final test scores.
 
-This hypothesis can be tested using regression to see which variables contribute more strongly
+**Hypothesis 2:** Average internal test scores (prior academic performance) explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
 
--   Hypothesis 3: Students studying more than 3 hours score significantly higher than those below the threshold.
+-   This hypothesis can be tested by fitting a linear regression model using all available data.
+-   The model's coefficient will be examined to see which variables contribute most to predicting final exam marks.
+-   The size of the coefficients will be compared for the engagement related metrics and the prior attainment metrics.
 
--   Hypothesis 4: A fully processed regression pipeline achieves better accuracy than a model without preprocessing.
+**Hypothesis 3:** Students studying for more than 3 hours per day have significantly higher final exam marks than those who study 3 hours or fewer.
+
+-   The dataset will be split into two groups based on daily study time.
+-   The distributions of final exam marks will be be compared for these two groups to determine if there is a statistically significiant difference.
+-   Both groups data will be checked for normality. If they are normally distributed then a t-test will be used, if not then a Mann-Whitney U test is applicable.
+
+**Hypothesis 4:** A fully processed regression pipeline achieves better accuracy than a model without preprocessing.
+
+-   I will use a simple linear regression model on the raw date without
 
 ## Project Plan
 
