@@ -65,6 +65,11 @@ I will validate this by comparing correlation coefficients for:
 -   Did the data limit you, and did you use an alternative approach to meet these challenges?
 -   How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 
+data cleaning (checking for null duplicates)
+visualisation types
+stats / hypothesis testing
+machine learning linear regression
+
 ## Ethical considerations
 
 -   This dataset was synthetic, so none of the data were related to any real pupils.
