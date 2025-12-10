@@ -6,11 +6,15 @@
 
 ## Dataset Content
 
--   This is a synthetic dataset containing student academic metrics for 2000 individual pupils. The dataset includes attendance, internal exam scores, assignment performance, daily study habits, and final exam marks. The dataset can be used to the predict Final Exam Marks based on academic indicators.
+-   This is a synthetic dataset containing student academic metrics for 2000 individual pupils. The dataset includes attendance, internal exam scores, assignment performance, daily study habits, and final exam marks.
 
 ## Business Requirements
 
--   Describe your business requirements
+-   The school needs to understand whether final exam performance can be predicted using available student data, including metrics such as attendance, assignment performance, study habits, and internal test results.
+    Purpose: To enable early identification of students at risk of underperforming so that interventions can be put in place.
+
+-   The School would like to determine which factors have the biggest influence on high final exam marks.
+    Purpose: To provide focus for school-wide strategy and resource allocation — for example, whether to prioritise improving attendance, strengthening homework routines, or focusing on internal assessment preparation.
 
 ## Hypothesis and how to validate?
 
@@ -20,7 +24,7 @@
 This hypothesis asks the question, is showing up consistently more importand than already being good at the subject? It is comparing engagement and consistency with academic ability and prior knowledge.
 I will validate this by calculating the pearson correlation for both final test scores and attendance and final test scores and average internal test scores.
 
--   Hypothesis 2: Average internal test scores, which represent prior academic performance, explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
+-   Hypothesis 2: Average internal test scores (prior academic performance) explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
 
 This hypothesis can be tested using regression to see which variables contribute more strongly
 
