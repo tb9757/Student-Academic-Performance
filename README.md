@@ -106,11 +106,16 @@ I will validate this by comparing correlation coefficients for:
 
 ## Main Data Analysis Libraries
 
--   Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+-   **Pandas:** used throughout this project, in essential data analysis tasks such as: reading data into dataframes, adding new features as columns, dropping columns, changing datatypes, checking for null values and duplicates.
+-   **Matplotlib:** foundation for most visualisations, useful for seetting chart titles and displaying the charts.
+-   **Seaborn:** to make visually appealing charts to assess: distributions of results, the correlation between different variables in a correlation heatmap, and a pairplot to get a feel for all of the data.
+-   **Numpy:** foundation for all data manipulation but specifically used to take the square root of the mean squared error for the regression model.
+-   **Plotly:** to make interactive scatterplots to demonstrate the relationship between two parameters for hypothesis 1.
+-   **Scikit learn:** for the machine learning section. Used for the linear regression tasks and was essential in addressing hypothesis 2 and 4.
 
 ## Credits
 
--   In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
+-   A huge source of help for this project was the code institute LMS.
 -   You can break the credits section up into Content and Media, depending on what you have included in your project.
 
 ### Content
