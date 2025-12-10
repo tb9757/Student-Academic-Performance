@@ -115,8 +115,26 @@ I will validate this by comparing correlation coefficients for:
 
 ## Credits
 
--   A huge source of help for this project was the code institute LMS.
--   You can break the credits section up into Content and Media, depending on what you have included in your project.
+A huge source of help for this project was the code institute LMS. It was particularly helpful to follow through the the machine learning section. I gathered information on how to construct a pipeline and the steps to take to evaluate its results.
+
+There are some sections of my code which I copied directly from the LMS, and I have referenced this in comments where I have done this. I will also list them here:
+
+-   Removing the duplicate side from a correlation heatmap whilst testing hypothesis 1
+-   The code to display the histogram and boxplot whilst investigating hypotheses 3. This is lifted straight from the LMS, it provides a dotted red line to show the mean value for each group - easier to directly compare whilst plotting a box plot on the side.
+
+Useful websites:
+
+-   Documentation page for scikit learn when trying to understand the difference between Lasso linear regression and ordinary least squares regression.
+-   Documentation page for seaborn when picking a colour for the correlation heatmap that would help pick out the differences between high and low correlation.
+
+Chat GPT has been helpful along the way in many ways, but I will list the main ways I have been using it below:
+
+Note: I told it not to show me code, just to ask me questions and give me hints, because I wanted to learn how everything works, not just copy generated code. I found this to be successful as it felt like a course mentor.
+
+-   Hypothesis refinement and ideation
+-   General debugging of code
+-   Sense checking thoughts on where to head next with analysis
+-   Understanding the meaning of the ML output
 
 ### Content
 
