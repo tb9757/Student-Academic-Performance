@@ -38,9 +38,15 @@ I will validate this by comparing correlation coefficients for:
 -   The distributions of final exam marks will be be compared for these two groups to determine if there is a statistically significiant difference.
 -   Both groups data will be checked for normality. If they are normally distributed then a t-test will be used, if not then a Mann-Whitney U test is applicable.
 
-**Hypothesis 4:** A fully processed regression pipeline achieves better accuracy than a model without preprocessing.
+**Hypothesis 4:** A regression model that includes preprocessing steps (such as scaling) will perform better than a model trained on the raw data.
 
--   I will use a simple linear regression model on the raw date without
+-   A basic linear regression model will be trained on the raw dataset with no preprocessing.
+
+-   A second model will be trained using a full regression pipeline that includes scaling.
+
+-   The performance of both models will be compared using standard regression metrics such as R2, Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE).
+
+-   Lower error values will indicate better performance
 
 ## Project Plan
 
