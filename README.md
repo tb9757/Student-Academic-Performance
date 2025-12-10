@@ -149,4 +149,4 @@ Note: I told it not to show me code, just to ask me questions and give me hints,
 
 ## Acknowledgements (optional)
 
--   Thank the people who provided support through this project.
+-   Thanks to Emma, my coursemates and the instructors.
