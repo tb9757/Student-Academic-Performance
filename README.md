@@ -81,6 +81,7 @@ I will validate this by comparing correlation coefficients for:
 
 -   Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
 -   Did you recognise gaps in your knowledge, and how did you address them?
+    Swapping linear regression for lasso - didn't fully understand why, have added a description from gpt
 -   If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
 
 ## Development Roadmap
