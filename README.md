@@ -67,8 +67,8 @@ I will validate this by comparing correlation coefficients for:
 
 ## Ethical considerations
 
--   Were there any data privacy, bias or fairness issues with the data?
--   How did you overcome any legal or societal issues?
+-   This dataset was synthetic, so none of the data were related to any real pupils.
+-   Despite this I removed the student ID tag as this would be good practice with a real dataset in order to annonomyse the data.
 
 ## Dashboard Design
 
