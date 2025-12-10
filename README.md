@@ -87,7 +87,19 @@ I will validate this by comparing correlation coefficients for:
 ## Development Roadmap
 
 -   What challenges did you face, and what strategies were used to overcome these challenges?
+
+initially thought the distributions were normal because of small skew values. when checked for normality later they were found not to be normal so had to switch from pearson to spearman, and had to do a new correlation heatmap (left the old one in)
+
+feature selection dropping all of the features, so swiitching to lasso
+
 -   What new skills or tools do you plan to learn next based on your project experience?
+
+I would like to continue my ML journey with the following
+
+-   a classification project
+-   an unsupervised project
+-   some sort of cross validation
+-   !!!!!!!!!!!!!!!!! whats the one where you get the machine to pick the correct algo
 
 ## Deployment
 
@@ -112,6 +124,8 @@ I will validate this by comparing correlation coefficients for:
 -   **Numpy:** foundation for all data manipulation but specifically used to take the square root of the mean squared error for the regression model.
 -   **Plotly:** to make interactive scatterplots to demonstrate the relationship between two parameters for hypothesis 1.
 -   **Scikit learn:** for the machine learning section. Used for the linear regression tasks and was essential in addressing hypothesis 2 and 4.
+
+## Conclusions
 
 ## Credits
 
