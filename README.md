@@ -50,13 +50,17 @@ I will validate this by comparing correlation coefficients for:
 
 ## Project Plan
 
--   Outline the high-level steps taken for the analysis.
--   How was the data managed throughout the collection, processing, analysis and interpretation steps?
--   Why did you choose the research methodologies you used?
+-   My plan is to clean the data and then understand it with some simple visualisations, with a focus on distributions so that I can understand what statistical tests to perform
+-   I want to know what effect studying has on their results so I intend to split pupils into a high study group and a low study group
+-   I will then use linear regression as a predictive model.
+-   Regression will also give me an idea of which factors have the biggest effect on final exam marks.
+-   I also would like to practice building an ML pipeline, so my plan is to build a pipeline version and compare it to a non-pipeline to see which perfoms better.
+-   I also want to gain skills in building a streamlit app so I will be doing this to build the dashboard.
 
 ## The rationale to map the business requirements to the Data Visualisations
 
--   List your business requirements and a rationale to map them to the Data Visualisations
+-   Understanding what impact different pupil behaviour has on their outcomes in school would be a very useful thing for a school to have
+-   Predicting pupil results is also an important tool for schools. It allows them to know which pupils to focus on and where to concentrate their efforts
 
 ## Analysis techniques used
 
