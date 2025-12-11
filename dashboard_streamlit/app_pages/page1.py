@@ -63,7 +63,14 @@ def page1_body():
         plt.title(f'{col} distribution')
         st.pyplot(plt.gcf())   # Show plot in Streamlit gcf - get current fig
         plt.clf()              # Reset matplotlib
-# st.header("This is a header")
-# st.subheader("This is a subheader")
-# st.text("This is fixed-width text.")
-# st.markdown("**This text is bold using Markdown!**")
+    
+    st.subheader("Conclusion for Hypothesis 1")
+    st.markdown("""Average internal test score shows a much stronger
+    positive relationship with final exam marks than attendance.
+    Both the scatter plots and the correlation heatmap confirm
+    this: test scores are far more closely aligned with final
+    exam performance, while attendance shows only a weak
+    association.""")
+
+    st.success("Hypothesis 1 is supported — prior academic performance is a "
+               "stronger predictor of final exam outcomes than attendance.")
