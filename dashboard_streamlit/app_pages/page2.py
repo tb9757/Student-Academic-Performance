@@ -64,3 +64,14 @@ def page2_body():
         )
     ax.set_ylim(df_corr.shape[1], 0)
     st.pyplot(fig)
+
+    st.subheader("Conclusion for Hypothesis 1")
+    st.markdown("""Average internal test score shows a much stronger
+    positive relationship with final exam marks than attendance.
+    Both the scatter plots and the correlation heatmap confirm
+    this: test scores are far more closely aligned with final
+    exam performance, while attendance shows only a weak
+    association.""")
+
+    st.success("Hypothesis 1 is supported — prior academic performance is a "
+               "stronger predictor of final exam outcomes than attendance.")
