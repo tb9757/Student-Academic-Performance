@@ -8,10 +8,14 @@ def page1_body():
     """
     df = pd.read_csv('../data/academic_performance_cleaned.csv')
     col1, col2, col3, col4, col5 = st.columns(5)
-    st.metric('Pupils', len(df))
+    col1.metric('Pupils', len(df))
+    col2.metric('Mean Final Score (%)', df['Final Exam Marks (out of 100)'].mean().round(1))
+    col3.metric('Mean Attendance (%)', df['Attendance (%)'].mean().round(1))
+    col4.metric('Mean Test Score (%)', (df['Average Test Score'].mean()*2.5).round(1))
+    col5.metric('Median study hours', df['Daily Study Hours'].median())
     st.markdown('This is a synthetic dataset containing student '
                 'academic metrics for 2000 individual pupils. The dataset '
-                'includes attendance, internal exam scores, assignment '
+                'includes attendance, internal test scores, assignment '
                 'performance, daily study habits, and final exam marks.')  
     if "show_table" not in st.session_state:
         st.session_state.show_table = False
