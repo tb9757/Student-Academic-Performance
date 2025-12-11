@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+# import numpy as np
+
 
 def page1_body():
     """
@@ -24,15 +25,14 @@ def page1_body():
     if st.button('View Data'):
         st.session_state.show_table = not st.session_state.show_table
     if st.session_state.show_table:
-        rows = st.sidebar.slider('No. of rows', 5, len(df), step=5)
+        rows = st.sidebar.slider('No. of rows', 5, 50, step=5)
         st.dataframe(df.head(rows))
 
     st.markdown('Two extra columns have been added, one is the mean of '
                 'the two internal test scores. '
                 'The other has split pupils into two groups: ')
-    st.markdown('- **High study group** > 3 hours study per day\n- **Low study group** ≤ 3 hours study per day')           
-                
-
+    st.markdown('- **High study group** > 3 hours study per day\n- **Low '
+                'study group** ≤ 3 hours study per day')
 # st.header("This is a header")
 # st.subheader("This is a subheader")
 # st.text("This is fixed-width text.")
