@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import pingouin as pg
 import seaborn as sns
 import streamlit as st
 
@@ -43,6 +44,36 @@ def page4_body():
                 """)
     st.markdown("""This can be tested statistically, in this case by 
                 using the Mann-Whitney U test. This test was chosen
-                due to the lack of normalality in these data. This test can
+                due to the lack of normality in these data. This test can
                 tell us if the groups are statistically different.
                 """)
+    # Run the Mann–Whitney U test
+    mwu_results = pg.mwu(x=df_pivot['high'], y=df_pivot['low'])
+
+    u_val = mwu_results['U-val'].iloc[0]
+    p_val = mwu_results['p-val'].iloc[0]
+    rbc   = mwu_results['RBC'].iloc[0]
+    cles  = mwu_results['CLES'].iloc[0]
+
+    st.subheader("Hypothesis 3: Study Hours and Final Exam Marks")
+
+    with st.container():
+        st.markdown(
+            "Comparing **> 3 hours/day** vs **≤ 3 hours/day** using a "
+            "*Mann–Whitney U test*."
+        )
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        col1.metric("U statistic", f"{u_val:,.1f}")
+        col2.metric("p-value", f"{p_val:.2e}")
+        col3.metric("RBC (effect size)", f"{rbc:.3f}")
+        col4.metric("CLES", f"{cles:.1%}")
+
+        st.success(
+            "Students who study **more than 3 hours per day** tend to achieve "
+            "higher final exam marks. The difference between the two groups "
+            "is **statistically significant** because p value is less than "
+            "0.05 Students who study >3 hours/day score higher about 76% of "
+            "the time compared to those studying ≤3 hours/day."
+            )

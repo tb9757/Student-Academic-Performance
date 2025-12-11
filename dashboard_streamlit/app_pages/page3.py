@@ -63,8 +63,7 @@ The bar chart shows the **relative size of the coefficients** in Model 2.
 A larger coefficient means a stronger influence on the prediction.
 Average Test Score has the largest coefficient by a wide margin, demonstrating
 that it is the most important predictor of final exam marks.
-
-**Overall, these results support the hypothesis** that prior academic
-performance explains more variance in final exam outcomes than
-engagement-based behaviours.
-""")
+        """)
+    st.success("**Overall, these results support the hypothesis** that prior "
+               "academic performance explains more variance in final exam "
+               "outcomes than engagement-based behaviours.")
