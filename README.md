@@ -145,6 +145,7 @@ Useful websites:
 
 -   Documentation page for scikit learn when trying to understand the difference between Lasso linear regression and ordinary least squares regression.
 -   Documentation page for seaborn when picking a colour for the correlation heatmap that would help pick out the differences between high and low correlation.
+-   Streamlit website for how to do metrics https://docs.streamlit.io/develop/api-reference/data/st.metric
 
 Chat GPT has been helpful along the way in many ways, but I will list the main ways I have been using it below:
 
