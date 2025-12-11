@@ -63,5 +63,3 @@ def page1_body():
         plt.title(f'{col} distribution')
         st.pyplot(plt.gcf())   # Show plot in Streamlit gcf - get current fig
         plt.clf()              # Reset matplotlib
-    
-    
