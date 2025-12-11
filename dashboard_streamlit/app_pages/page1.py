@@ -45,11 +45,11 @@ def page1_body():
     st.markdown('- **High study group** > 3 hours study per day\n- **Low '
                 'study group** ≤ 3 hours study per day')
     st.markdown('These new columns are used later in the hypothesis '
-                'testing pages (particularly Hypothesis 2 and 3).')    
+                'testing pages (particularly Hypothesis 2 and 3).')
     with st.sidebar.expander("Explore numerical distributions", expanded=False):
         # store numerical column names in a list called num_cols
-        num_cols = df.select_dtypes(['int64','float64']).columns
-        st.radio('Show Distribution for:', num_cols, key='dist_col') # saving choice in session state        
+        num_cols = df.select_dtypes(['int64', 'float64']).columns
+        st.radio('Show Distribution for:', num_cols, key='dist_col')  # saving choice in session state
     if 'dist_col' in st.session_state:
         col = st.session_state['dist_col']
         st.subheader(f'{col} distribution')
