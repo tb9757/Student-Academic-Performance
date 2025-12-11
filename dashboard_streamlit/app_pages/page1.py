@@ -16,15 +16,18 @@ def page1_body():
     st.markdown('This is a synthetic dataset containing student '
                 'academic metrics for 2000 individual pupils. The dataset '
                 'includes attendance, internal test scores, assignment '
-                'performance, daily study habits, and final exam marks.')  
+                'performance, daily study habits, and final exam marks. '
+                'Click below to view data, use the slider in the sidebar'
+                'to chage the number of rows displayed')
     if "show_table" not in st.session_state:
         st.session_state.show_table = False
     if st.button('View Data'):
         st.session_state.show_table = not st.session_state.show_table
     if st.session_state.show_table:
-        st.dataframe(df.head())
+        rows = st.sidebar.slider('No. of rows', 5, len(df), step=5)
+        st.dataframe(df.head(rows))
 
-    st.markdown('Two extra columns have been added, one is the mean average of '
+    st.markdown('Two extra columns have been added, one is the mean of '
                 'the two internal test scores. '
                 'The other has split pupils into two groups: ')
     st.markdown('- **High study group** > 3 hours study per day\n- **Low study group** ≤ 3 hours study per day')           
