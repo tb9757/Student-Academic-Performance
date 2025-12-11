@@ -25,10 +25,12 @@ def page2_body():
 
     with tab1:
         st.subheader('Average Test Score vs Final Exam Mark')
-        st.scatter_chart(data=df, x='Average Test Score', y=('Final Exam Marks (out of 100)'))
+        fig = px.scatter(df, x='Average Test Score', y='Final Exam Marks (out of 100)', trendline='ols')
+        st.plotly_chart(fig)
     with tab2:
         st.subheader('Attendance vs Final Exam Mark')
-        st.scatter_chart(data=df, x='Attendance (%)', y='Final Exam Marks (out of 100)')
+        fig2 = px.scatter(df, x='Attendance (%)', y='Final Exam Marks (out of 100)', trendline='ols')
+        st.plotly_chart(fig2)
 
     # df = pd.read_csv('../data/penguins_cleaned.csv')
     # choose_plot = st.radio('Choose Plot:', ['Bill length vs Bill depth', 'Bill Depth vs Body Mass'])
