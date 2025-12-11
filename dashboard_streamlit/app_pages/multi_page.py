@@ -9,8 +9,8 @@ class MultiPage:
 
         # Set the page configuration
         st.set_page_config(
-            page_title='ML Classification: Penguins',
-            page_icon=":penguin:"
+            page_title='Student Academic Performance',
+            page_icon="👨‍🏫"
         )
 
     # Method to add a new page to the app
