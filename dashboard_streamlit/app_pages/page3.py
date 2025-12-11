@@ -13,13 +13,13 @@ def page3_body():
                  'as attendance, assignment score, and daily study hours.')
     # df = pd.read_csv('../data/academic_performance_cleaned.csv')
 
-    st.markdown("To test this hypothesis I used two linear regression models. "
-                "Model 1 used only Average Test Score to predict Final Exam "
-                "Marks. Model 2 included the engagement behaviours as "
-                "additional predictors By comparing R² and RMSE across the "
-                "two models, and examining the coefficients in Model 2, I "
-                "can assess whether prior attainment explains more variance "
-                "than engagement behaviours.")
+    st.markdown("""To test this hypothesis I used two linear regression models.
+                Model 1 used only Average Test Score to predict Final Exam
+                Marks. Model 2 included the engagement behaviours as
+                additional predictors By comparing R² and RMSE across the
+                two models, and examining the coefficients in Model 2, I
+                can assess whether prior attainment explains more variance
+                than engagement behaviours.""")
     model1_r2 = 0.73
     model1_RMSE = 5.6
 
