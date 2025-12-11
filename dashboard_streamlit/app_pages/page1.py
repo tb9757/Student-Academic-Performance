@@ -6,11 +6,13 @@ def page1_body():
     """
     This function displays the content of Page one.
     """
+    df = pd.read_csv('../data/academic_performance_cleaned.csv')
+    col1, col2, col3, col4, col5 = st.columns(5)
+    st.metric('Pupils', len(df))
     st.markdown('This is a synthetic dataset containing student '
                 'academic metrics for 2000 individual pupils. The dataset '
                 'includes attendance, internal exam scores, assignment '
                 'performance, daily study habits, and final exam marks.')  
-    df = pd.read_csv('../data/academic_performance_cleaned.csv')
     if "show_table" not in st.session_state:
         st.session_state.show_table = False
     if st.button('View Data'):
