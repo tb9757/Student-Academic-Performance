@@ -1,6 +1,9 @@
-import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import plotly.express as px
+import seaborn as sns
+import streamlit as st
 
 
 def page2_body():
@@ -8,8 +11,8 @@ def page2_body():
     This function displays the content of Page one.
     """
     st.header('Hypothesis 1:')
-    st.subheader('Average internal test score is more strongly correlated with '
-                'final exam mark than attendance.')
+    st.subheader('Average internal test score is more strongly correlated '
+                 'with final exam mark than attendance.')
     df = pd.read_csv('../data/academic_performance_cleaned.csv')
 
     st.markdown('This hypothesis compares importance of being '
@@ -21,31 +24,43 @@ def page2_body():
     st.markdown('- Attendance and final test scores.\n - Average internal '
                 'test scores and final test scores.')
 
-    tab1, tab2 = st.tabs(['Average Test Score vs Final Exam Mark', 'Attendance vs Final Exam Mark'])
+    tab1, tab2 = st.tabs(['Average Test Score vs Final Exam Mark',
+                          'Attendance vs Final Exam Mark'])
 
     with tab1:
         st.subheader('Average Test Score vs Final Exam Mark')
-        fig = px.scatter(df, x='Average Test Score', y='Final Exam Marks (out of 100)', trendline='ols')
+        fig = px.scatter(df, x='Average Test Score',
+                         y='Final Exam Marks (out of 100)',
+                         trendline='ols')
         st.plotly_chart(fig)
     with tab2:
         st.subheader('Attendance vs Final Exam Mark')
-        fig2 = px.scatter(df, x='Attendance (%)', y='Final Exam Marks (out of 100)', trendline='ols')
+        fig2 = px.scatter(df, x='Attendance (%)',
+                          y='Final Exam Marks (out of 100)',
+                          trendline='ols')
         st.plotly_chart(fig2)
+    st.subheader('Correlation')
 
-    # df = pd.read_csv('../data/penguins_cleaned.csv')
-    # choose_plot = st.radio('Choose Plot:', ['Bill length vs Bill depth', 'Bill Depth vs Body Mass'])
-    # color = st.radio('Color by:', ['Species', 'Diet'])
-    # if choose_plot == 'Bill length vs Bill depth':
-    #     if color == 'Species':
-    #         st.scatter_chart(data=df, x='bill_length_mm', y='bill_depth_mm', x_label='Bill Length (mm)', y_label='bill depth (mm)', color='species')
-    #     elif color == 'Diet':
-    #         st.scatter_chart(data=df, x='bill_length_mm', y='bill_depth_mm', x_label='Bill Length (mm)', y_label='bill depth (mm)', color='diet')
-    # elif choose_plot == 'Bill Depth vs Body Mass':
-    #     if color == 'Species':
-    #         st.scatter_chart(data=df, x='body_mass_g', y='bill_depth_mm', x_label='Body mass (G)', y_label='bill depth (mm)', color='species')
-    #     elif color == 'Diet':
-    #         st.scatter_chart(data=df, x='body_mass_g', y='bill_depth_mm', x_label='Body mass (G)', y_label='bill depth (mm)', color='diet')
+    # Select the columns that I want assess correlation
+    corr_cols = ['Attendance (%)', 'Assignment Score (out of 10)',
+                 'Daily Study Hours', 'Final Exam Marks (out of 100)',
+                 'Average Test Score']
+    # calculate pearson correlation coefficient for these columns
+    df_corr = df[corr_cols].corr(method='spearman')
+    st.table(df_corr)
 
-    # fig = px.scatter(df, x='bill_length_mm', y='bill_depth_mm', color='species', size='body_mass_g', hover_data=['island', 'sex'])
-    # title='Penguin Species Clustering by Bill Dimensions'
-    # fig.show()
+    # code copied from LMS to remove duplicated side
+    fig, ax = plt.subplots()
+    mask = np.zeros_like(df_corr)
+    mask[np.triu_indices_from(mask)] = True
+    sns.heatmap(
+        df_corr,
+        annot=True,
+        mask=mask,
+        cmap='coolwarm',
+        annot_kws={"size": 8},
+        linewidths=0.5,
+        ax=ax
+        )
+    ax.set_ylim(df_corr.shape[1], 0)
+    st.pyplot(fig)
