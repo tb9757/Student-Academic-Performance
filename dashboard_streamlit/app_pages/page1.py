@@ -14,9 +14,11 @@ def page1_body():
     df = pd.read_csv('../data/academic_performance_cleaned.csv')
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric('Pupils', len(df))
-    col2.metric('Mean Final Score (%)', df['Final Exam Marks (out of 100)'].mean().round(1))
+    col2.metric('Mean Final Score (%)',
+                df['Final Exam Marks (out of 100)'].mean().round(1))
     col3.metric('Mean Attendance (%)', df['Attendance (%)'].mean().round(1))
-    col4.metric('Mean Test Score (%)', (df['Average Test Score'].mean()*2.5).round(1))
+    col4.metric('Mean Test Score (%)',
+                (df['Average Test Score'].mean()*2.5).round(1))
     col5.metric('Median study hours', df['Daily Study Hours'].median())
     st.markdown('This is a synthetic dataset containing student '
                 'academic metrics for 2000 individual pupils. The dataset '
@@ -46,10 +48,12 @@ def page1_body():
                 'study group** ≤ 3 hours study per day')
     st.markdown('These new columns are used later in the hypothesis '
                 'testing pages (particularly Hypotheses 1, 2, and 3).')
-    with st.sidebar.expander("Explore numerical distributions", expanded=False):
+    with st.sidebar.expander("Explore numerical distributions",
+                             expanded=False):
         # store numerical column names in a list called num_cols
         num_cols = df.select_dtypes(['int64', 'float64']).columns
-        st.radio('Show Distribution for:', num_cols, key='dist_col')  # saving choice in session state
+        st.radio('Show Distribution for:',
+                 num_cols, key='dist_col')  # saving choice in session state
     if 'dist_col' in st.session_state:
         col = st.session_state['dist_col']
         st.subheader(f'{col} distribution')
@@ -57,7 +61,7 @@ def page1_body():
         plt.figure(figsize=(8, 4))
         sns.histplot(data=df, x=col, kde=True, bins=20)
         plt.title(f'{col} distribution')
-        st.pyplot(plt.gcf())   # Show plot in Streamlit gcf - get current figure
+        st.pyplot(plt.gcf())   # Show plot in Streamlit gcf - get current fig
         plt.clf()              # Reset matplotlib
 # st.header("This is a header")
 # st.subheader("This is a subheader")
