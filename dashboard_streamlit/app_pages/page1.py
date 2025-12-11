@@ -1,5 +1,9 @@
-import streamlit as st
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
+import streamlit as st
+sns.set_style('whitegrid')
+
 # import numpy as np
 
 
@@ -17,22 +21,44 @@ def page1_body():
     st.markdown('This is a synthetic dataset containing student '
                 'academic metrics for 2000 individual pupils. The dataset '
                 'includes attendance, internal test scores, assignment '
-                'performance, daily study habits, and final exam marks. '
-                'Click below to view data, use the slider in the sidebar'
-                'to chage the number of rows displayed')
+                'performance, daily study habits, and final exam marks.'
+                )
+    st.markdown('Click to view data, use the slider and select '
+                'columns to change display '
+                )
+    st.subheader("Explore the data")
     if "show_table" not in st.session_state:
         st.session_state.show_table = False
     if st.button('View Data'):
         st.session_state.show_table = not st.session_state.show_table
     if st.session_state.show_table:
         rows = st.sidebar.slider('No. of rows', 5, 50, step=5)
-        st.dataframe(df.head(rows))
+        cols = st.sidebar.multiselect("Select columns:", df.columns)
+        if cols:
+            st.dataframe(df[cols].head(rows))
+        else:
+            st.dataframe(df.head(rows))
 
-    st.markdown('Two extra columns have been added, one is the mean of '
+    st.markdown('Two new columns have been added, one is the mean of '
                 'the two internal test scores. '
                 'The other has split pupils into two groups: ')
     st.markdown('- **High study group** > 3 hours study per day\n- **Low '
                 'study group** ≤ 3 hours study per day')
+    st.markdown('These new columns are used later in the hypothesis '
+                'testing pages (particularly Hypothesis 2 and 3).')    
+    with st.sidebar.expander("Explore numerical distributions", expanded=False):
+        # store numerical column names in a list called num_cols
+        num_cols = df.select_dtypes(['int64','float64']).columns
+        st.radio('Show Distribution for:', num_cols, key='dist_col') # saving choice in session state        
+    if 'dist_col' in st.session_state:
+        col = st.session_state['dist_col']
+        st.subheader(f'{col} distribution')
+        st.write('Select distribution with expander in sidebar')
+        plt.figure(figsize=(8, 4))
+        sns.histplot(data=df, x=col, kde=True, bins=20)
+        plt.title(f'{col} distribution')
+        st.pyplot(plt.gcf())   # Show plot in Streamlit gcf - get current figure
+        plt.clf()              # Reset matplotlib
 # st.header("This is a header")
 # st.subheader("This is a subheader")
 # st.text("This is fixed-width text.")
