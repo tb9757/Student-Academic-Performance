@@ -21,6 +21,15 @@ def page2_body():
     st.markdown('- Attendance and final test scores.\n - Average internal '
                 'test scores and final test scores.')
 
+    tab1, tab2 = st.tabs(['Average Test Score vs Final Exam Mark', 'Attendance vs Final Exam Mark'])
+
+    with tab1:
+        st.subheader('Average Test Score vs Final Exam Mark')
+        st.scatter_chart(data=df, x='Average Test Score', y=('Final Exam Marks (out of 100)'))
+    with tab2:
+        st.subheader('Attendance vs Final Exam Mark')
+        st.scatter_chart(data=df, x='Attendance (%)', y='Final Exam Marks (out of 100)')
+
     # df = pd.read_csv('../data/penguins_cleaned.csv')
     # choose_plot = st.radio('Choose Plot:', ['Bill length vs Bill depth', 'Bill Depth vs Body Mass'])
     # color = st.radio('Color by:', ['Species', 'Diet'])
