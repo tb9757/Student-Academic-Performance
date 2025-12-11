@@ -1,10 +1,26 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+
+
 def page2_body():
     """
     This function displays the content of Page one.
     """
+    st.header('Hypothesis 1:')
+    st.subheader('Average internal test score is more strongly correlated with '
+                'final exam mark than attendance.')
+    df = pd.read_csv('../data/academic_performance_cleaned.csv')
+
+    st.markdown('This hypothesis compares importance of being '
+                'consistently in school versus performing well in '
+                'internal assessments. It is comparing engagement '
+                'and consistency with academic ability and prior '
+                'knowledge.')
+    st.markdown('Correlation coefficients are compared for:')
+    st.markdown('- Attendance and final test scores.\n - Average internal '
+                'test scores and final test scores.')
+
     # df = pd.read_csv('../data/penguins_cleaned.csv')
     # choose_plot = st.radio('Choose Plot:', ['Bill length vs Bill depth', 'Bill Depth vs Body Mass'])
     # color = st.radio('Color by:', ['Species', 'Diet'])
