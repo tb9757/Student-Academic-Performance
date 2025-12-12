@@ -93,20 +93,22 @@ This project involves a range of different analysis techniques:
 
 -   Data cleaning, checking for null values and duplicate rows
 -   Feature engineering, average test scores column and categorisation of pupils into high and low study groups
--   Assessed data distribution with histograms
--   Used scatter charts to assess correlaion between features
--   Assessed correlation using both Pearson and Spearman techniques and visualised this in a correlation heatmap
--   Used Mann-Whiteney U test to assess the difference between two groups
--   Performed linear regression and increased complexity by building a pipeline
+-   Assessing data distribution with histograms
+-   Using scatter charts to assess correlaion between features
+-   Assessing correlation using both Pearson and Spearman techniques and visualising these in correlation heatmaps
+-   Using the Mann-Whiteney U statistical test to assess the difference between two groups
+-   Performing linear regression and increasing the complexity of the model by building a pipeline
 
 A limiting factor of the dataset is its size. A larger dataset could have given more interesting and robust insights.
 
 I also felt limited by the synthetic nature of the dataset. The dataset has been designed to be a teaching tool to help understand and practice linear regression. Any conclusions made are valid but maybe not as interesting as if the dataset was actual pupil data. This would have created more complex privacy issues and it is perfectly understandable that this kind of data is not made available to the public.
 
-The techniques in this project could be used on real data by a school or an organisation interested and the results would provide meaningful and useful information with regards to the business requirements I have outlined
+The techniques in this project could be used on real data by a school or an organisation and the results would provide meaningful and useful information with regards to the business requirements I have outlined.
 
 Use generative AI tools:
-I have found chat GPT to be useful throughout this project. Particularly in hypothesis generation and conclusion writing. For both of these I first came up with ideas and then asked chat GPT for help and refinement. This was very useful in making hypotheses because I wanted my hypotheses to be meaningful and measurable in a useful way that also allowed me to practice techniques (like pipeline generation) without just doing ML for the sake of it (for example). Also with conclusion writing it was useful to bring to the forefront any slight misunderstandings I had with the output values of linear regression or the statistical tests.
+I have found chat GPT to be useful throughout this project. Particularly in hypothesis generation and conclusion writing. For both of these I first came up with ideas and then asked chat GPT for help and refinement. This was very useful in making hypotheses because I wanted them to be meaningful and measurable in a useful way that also allowed me to practice techniques (like pipeline generation) without just doing ML for the sake of it. With conclusion I would type my interpretation of the results and ask GPT to evaluate my response. It was useful to bring to my attention any slight misunderstandings I had with the output values of linear regression or the statistical tests.
+
+I also prompted chat GPT not to show me any code, but to act as a tutor/mentor and ask questions and give hints. I found this really helpful because I didn't want to fall into the trap of just copying code from AI and not understanding what the code does.
 
 visualisation types
 stats / hypothesis testing
