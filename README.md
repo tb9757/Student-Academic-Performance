@@ -14,7 +14,7 @@
 -   The School would like to determine which factors have the biggest influence on high final exam marks.
     Purpose: To provide focus for school-wide strategy and resource allocation — for example, whether to prioritise improving attendance, strengthening homework routines, or focusing on internal assessment preparation.
 
-## Hypothesis and how to validate?
+## Hypothesis and how to validate
 
 **Hypothesis 1:** Average internal test score is more strongly correlated with final exam mark than attendance.
 
@@ -118,9 +118,35 @@ I also prompted chat GPT not to show me any code, but to act as a tutor/mentor a
 ## Dashboard Design
 
 -   List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
--   Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
--   How were data insights communicated to technical and non-technical audiences?
--   Explain how the dashboard was designed to communicate complex data insights to different audiences.
+    Dashboard page 1:
+-   Overview of the dataset, button which allows the user to view the dataset. Includes a slider to select the number of rows visable and a filter that allows for selection of columns.
+-   Basic metrics that summarise the data columns at the top
+-   Histograms to show data distributions with a drop down list that allows you to select different columns
+
+Dashboard page 2:
+
+-   Hypothesis 1 including plotly scatter graphs and correlation heatmap
+-   Conclusions
+
+Hasboard page 3:
+
+-   Hypothesis 2 inclusing R² and RMSE values for the two different models
+-   Barchart to show the coefficients demonstrating which factor had the biggest impact on the final mark prediction.
+-   Conclusions
+
+Dashboard page 4:
+
+-   Hypothesis 3 including histogram of the two different groups and a boxplot to show their distributions
+-   Results of the Mann-Whitney U statistical test
+-   Conclusions
+
+Dashboard page 5:
+
+-   Hypothesis 4 including the R² and RMSE values for the two different models
+-   conclusions
+
+Simple metrics and charts are provided which are easy and clear to interpret. This allows for non-technical audience to gain useful insight from this dashboard.
+High level explanaion and conclusions provide technical insight for interested parties. Technical and non-technical elements found on all pages.
 
 ## Unfixed Bugs
 
