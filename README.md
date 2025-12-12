@@ -154,18 +154,14 @@ I would like to continue my ML journey with the following
 
 ## Deployment
 
-### Heroku
+### Streamlit
 
--   The App live link is: https://YOUR_APP_NAME.herokuapp.com/
--   Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
--   The project was deployed to Heroku using the following steps.
+-   This project is deployed using Streamlit Community Cloud.
+-   The App live link is: https://student-academic-performance-tisk4bvfc4vqsidub7n5fx.streamlit.app/
 
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+The application runs on a remote server and is connected directly to this GitHub repository. When a user accesses the dashboard link, the Streamlit app executes the Python code on the server and renders an interactive dashboard in the browser.
+
+Users can explore the data, interact with visualisations, and navigate between pages without needing to install any software locally.
 
 ## Main Data Analysis Libraries
 
@@ -215,4 +211,4 @@ Note: I told it not to show me code, just to ask me questions and give me hints,
 
 ## Acknowledgements (optional)
 
--   Thanks to Emma, my coursemates and the instructors.
+-   Thanks to Emma, my coursemates and the code institute instructors.
