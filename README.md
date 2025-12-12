@@ -169,16 +169,15 @@ Towards the end of the project I was using the sci kit learn selectfrommodel fun
 
 Initially I thought that the distributions were normal because of small skew values. Later when I checked for normality I found the distributions not to be normal. I had to switch the statistical test I had done to work out the correlation coefficients for H1. I also had to make a new correlation heatmap. I left both in to show my working process and as you can see it made little difference in the end.
 
-During the feature selection section of my pipeline it dropped all the features bar one. This made the model worse at predicting and I wasn't sure why this was. I consulted with chat GPT and it suggested that I swiitching to the lasso method of feature selection because it gave a more realistic view of which features were contributing in a meaningful way.
-
--   What new skills or tools do you plan to learn next based on your project experience?
+During the feature selection section of my pipeline it dropped all the features bar one. This made the model worse at predicting and I wasn't sure why this was. I consulted with chat GPT and it suggested that I switched to the lasso method of feature selection because it gave a more realistic view of which features were contributing in a meaningful way.
 
 I would like to continue my ML journey with the following
 
--   a classification project
--   an unsupervised project
--   some sort of cross validation
--   !!!!!!!!!!!!!!!!! whats the one where you get the machine to pick the correct algo
+-   A classification project
+-   An unsupervised learning project
+-   A cross validation search using GridSearchCV
+-   A more extensive pipeline with more steps (e.g. PCA)
+-   An image analysis project
 
 ## Deployment
 
