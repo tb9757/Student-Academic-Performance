@@ -11,30 +11,30 @@
 -   The school needs to understand whether final exam performance can be predicted using available student data, including metrics such as attendance, assignment performance, study habits, and internal test results.
     Purpose: To enable early identification of students at risk of underperforming so that interventions can be put in place.
 
--   The School would like to determine which factors have the biggest influence on high final exam marks.
+-   The school would like to determine which factors have the biggest influence on high final exam marks.
     Purpose: To provide focus for school-wide strategy and resource allocation — for example, whether to prioritise improving attendance, strengthening homework routines, or focusing on internal assessment preparation.
 
 ## Hypothesis and how to validate
 
-**Hypothesis 1:** Average internal test score is more strongly correlated with final exam mark than attendance.
+**Hypothesis 1:** Average internal test score is more strongly correlated with final exam marks than attendance.
 
 This hypothesis addresses the importance of being consistently in school versus performing well in internal assessments. It is comparing engagement and consistency with academic ability and prior knowledge.
 I will validate this by comparing correlation coefficients for:
 
--   Attendance and final test scores.
--   Average internal test scores and final test scores.
+-   Attendance and final exam marks.
+-   Average internal test scores and final exam marks.
 
-**Hypothesis 2:** Average internal test scores (prior academic performance) explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
+**Hypothesis 2:** Average internal test scores (prior academic performance) explain more variance in final exam marks than engagement-based behaviours, such as attendance, assignment score, and daily study hours.
 
 -   This hypothesis can be tested by fitting a linear regression model using all available data.
--   The model's coefficient will be examined to see which variables contribute most to predicting final exam marks.
--   The size of the coefficients will be compared for the engagement related metrics and the prior attainment metrics.
+-   The model's coefficients will be examined to see which variables contribute most to predicting final exam marks.
+-   The size of the coefficients will be compared for the engagement-related metrics and the prior attainment metrics.
 
 **Hypothesis 3:** Students studying for more than 3 hours per day have significantly higher final exam marks than those who study 3 hours or fewer.
 
 -   The dataset will be split into two groups based on daily study time.
--   The distributions of final exam marks will be be compared for these two groups to determine if there is a statistically significant difference.
--   Both groups data will be checked for normality. If they are normally distributed then a t-test will be used, if not then a Mann-Whitney U test is applicable.
+-   The distributions of final exam marks will be compared for these two groups to determine if there is a statistically significant difference.
+-   Both groups' data will be checked for normality. If they are normally distributed, then a t-test will be used; if not then a Mann-Whitney U test is applicable.
 
 **Hypothesis 4:** A regression model that includes pre-processing steps (such as scaling) will perform better than a model trained on the raw data.
 
@@ -44,12 +44,12 @@ I will validate this by comparing correlation coefficients for:
 
 -   The performance of both models will be compared using standard regression metrics such as R2, Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE).
 
--   Lower error values will indicate better performance
+-   Lower error values will indicate better performance.
 
 ## Project Plan
 
--   My plan is to clean the data and then understand it with some simple visualisations, with a focus on distributions so that I can understand what statistical tests to perform
--   I want to know what effect studying has on their results so I intend to split pupils into a high study group and a low study group
+-   My plan is to clean the data and then understand it with some simple visualisations, with a focus on distributions so that I can understand what statistical tests to perform.
+-   I want to know what effect studying has on their results so I intend to split pupils into a high study group and a low study group.
 -   I will then use linear regression as a predictive model.
 -   Regression will also give me an idea of which factors have the biggest effect on final exam marks.
 -   I also would like to practice building an ML pipeline, so my plan is to build a pipeline version and compare it to a non-pipeline to see which performs better.
@@ -91,13 +91,13 @@ These visualisations support evidence-based decision-making by highlighting whic
 
 This project involves a range of different analysis techniques:
 
--   Data cleaning, checking for null values and duplicate rows
--   Feature engineering, average test scores column and categorisation of pupils into high and low study groups
--   Assessing data distribution with histograms
--   Using scatter charts to assess correlation between features
--   Assessing correlation using both Pearson and Spearman techniques and visualising these in correlation heatmaps
--   Using the Mann-Whitney U statistical test to assess the difference between two groups
--   Performing linear regression and increasing the complexity of the model by building a pipeline
+-   Data cleaning, checking for null values and duplicate rows.
+-   Feature engineering, average test score column and categorisation of pupils into high and low study groups.
+-   Assessing data distribution with histograms.
+-   Using scatter charts to assess correlation between features.
+-   Assessing correlation using both Pearson and Spearman techniques and visualising these in correlation heatmaps.
+-   Using the Mann-Whitney U statistical test to assess the difference between two groups.
+-   Performing linear regression and increasing the complexity of the model by building a pipeline.
 
 A limiting factor of the dataset is its size. A larger dataset could have given more interesting and robust insights.
 
@@ -108,9 +108,9 @@ More interesting analysis could have been done if the dataset also contained mor
 The techniques in this project could be used on real data by a school or an organisation and the results would provide meaningful and useful information with regards to the business requirements I have outlined.
 
 Use generative AI tools:
-I have found chat GPT to be useful throughout this project. Particularly in hypothesis generation and conclusion writing. For both of these I first came up with ideas and then asked chat GPT for help and refinement. This was very useful in making hypotheses because I wanted them to be meaningful and measurable in a useful way that also allowed me to practice techniques (like pipeline generation) without just doing ML for the sake of it. With conclusion I would type my interpretation of the results and ask GPT to evaluate my response. It was useful to bring to my attention any slight misunderstandings I had with the output values of linear regression or the statistical tests.
+I have found ChatGPT to be useful throughout this project. Particularly in hypothesis generation and conclusion writing. For both of these I first came up with ideas and then asked ChatGPT for help and refinement. This was very useful in making hypotheses because I wanted them to be meaningful and measurable in a useful way that also allowed me to practice techniques (like pipeline generation) without just doing ML for the sake of it. For conclusions, I would type my interpretation of the results and ask ChatGPT to evaluate my response. It was useful to bring to my attention any slight misunderstandings I had with the output values of linear regression or the statistical tests.
 
-I also prompted chat GPT not to show me any code, but to act as a tutor/mentor and ask questions and give hints. I found this really helpful because I didn't want to fall into the trap of just copying code from AI and not understanding what the code does.
+I also prompted ChatGPT not to show me any code, but to act as a tutor/mentor and ask questions and give hints. I found this really helpful because I didn't want to fall into the trap of just copying code from AI and not understanding what the code does.
 
 ## Ethical considerations
 
@@ -122,33 +122,33 @@ I also prompted chat GPT not to show me any code, but to act as a tutor/mentor a
 -   List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
     Dashboard page 1:
 -   Overview of the dataset, button which allows the user to view the dataset. Includes a slider to select the number of rows visible and a filter that allows for selection of columns.
--   Basic metrics that summarise the data columns at the top
--   Histograms to show data distributions with a drop down list that allows you to select different columns
+-   Basic metrics that summarise the data columns at the top.
+-   Histograms to show data distributions with a drop-down list that allows you to select different columns.
 
 Dashboard page 2:
 
 -   Hypothesis 1 including Plotly scatter graphs and correlation heatmap
--   Conclusions
+-   Conclusions.
 
 Dasboard page 3:
 
--   Hypothesis 2 including R² and RMSE values for the two different models
--   Bar chart to show the coefficients demonstrating which factor had the biggest impact on the final mark prediction.
--   Conclusions
+-   Hypothesis 2 including R² and RMSE values for the two different models.
+-   Bar chart to show the coefficients demonstrating which factor has the biggest impact on the final mark prediction.
+-   Conclusions.
 
 Dashboard page 4:
 
--   Hypothesis 3 including histogram of the two different groups and a boxplot to show their distributions
--   Results of the Mann-Whitney U statistical test
--   Conclusions
+-   Hypothesis 3 including histogram of the two different groups and a boxplot to show their distributions.
+-   Results of the Mann-Whitney U statistical test.
+-   Conclusions.
 
 Dashboard page 5:
 
--   Hypothesis 4 including the R² and RMSE values for the two different models
--   conclusions
+-   Hypothesis 4 including the R² and RMSE values for the two different models.
+-   Conclusions.
 
-Simple metrics and charts are provided which are easy and clear to interpret. This allows for non-technical audience to gain useful insight from this dashboard.
-High level explanation and conclusions provide technical insight for interested parties. Technical and non-technical elements found on all pages.
+Simple metrics and charts are provided which are easy and clear to interpret. This allows for a non-technical audience to gain useful insight from this dashboard.
+High-level explanation and conclusions provide technical insight for interested parties. Technical and non-technical elements found on all pages.
 
 ## Unfixed Bugs
 
@@ -159,17 +159,17 @@ At the beginning of the project there were 3 things I wanted to work on because 
 -   Machine learning
 -   Dashboard design using Streamlit
 
-To get to grips with both statistics and machine learning recapped the code institute LMS pages and focused on the steps taken there to understand how to apply this to my project. For Streamlit I used the Streamlit website https://docs.streamlit.io/ as a resource to find different widget options and learn how they work.
+To get to grips with both statistics and machine learning, I recapped the Code Institute LMS pages and focused on the steps taken there to understand how to apply this to my project. For Streamlit I used the Streamlit website https://docs.streamlit.io/ as a resource to find different widget options and learn how they work.
 
-Towards the end of the project I was using the sci kit learn SelectFromModel function to select features for the ML model to be trained. When the model gave some odd results I asked chat GPT to evaluate my pipeline. It informed me that I should be using Lasso linear regression rather than the basic linear regression. This was a gap in my knowledge and going forward I would like to gain more understanding of when and why to use different algorithms.
+Towards the end of the project I was using the scikit-learn SelectFromModel function to select features for the ML model to be trained. When the model gave some odd results I asked ChatGPT to evaluate my pipeline. It informed me that I should be using Lasso linear regression rather than the basic linear regression. This was a gap in my knowledge and going forward I would like to gain more understanding of when and why to use different algorithms.
 
 ## Development Roadmap
 
 -   What challenges did you face, and what strategies were used to overcome these challenges?
 
-Initially I thought that the distributions were normal because of small skew values. Later when I checked for normality I found the distributions not to be normal. I had to switch the statistical test I had done to work out the correlation coefficients for H1. I also had to make a new correlation heatmap. I left both in to show my working process and as you can see it made little difference in the end.
+Initially I thought that the distributions were normal because of small skew values. Later when I checked for normality I found the distributions not to be normal. I had to switch the statistical test I used to work out the correlation coefficients for H1. I also had to make a new correlation heatmap. I left both in to show my working process and as you can see it made little difference in the end.
 
-During the feature selection section of my pipeline it dropped all the features bar one. This made the model worse at predicting and I wasn't sure why this was. I consulted with chat GPT and it suggested that I switched to the lasso method of feature selection because it gave a more realistic view of which features were contributing in a meaningful way.
+During the feature selection section of my pipeline it dropped all the features bar one. This made the model worse at predicting and I wasn't sure why this was. I consulted with ChatGPT and it suggested that I switched to the Lasso method of feature selection because it gave a more realistic view of which features were contributing in a meaningful way.
 
 I would like to continue my ML journey with the following
 
@@ -221,20 +221,20 @@ Overall, these results support the hypothesis that prior academic performance ex
 
 **Hypothesis 3:** Students studying for more than 3 hours per day have significantly higher final exam marks than those who study 3 hours or fewer.
 
-Students who study more than 3 hours per day tend to achieve higher final exam marks. The difference between the two groups is statistically significant because p value is less than 0.05 Students who study >3 hours/day score higher about 76% of the time compared to those studying ≤3 hours/day.
+Students who study more than 3 hours per day tend to achieve higher final exam marks. The difference between the two groups is statistically significant because the p-value is less than 0.05. Students who study >3 hours/day score higher about 76% of the time compared to those studying ≤3 hours/day.
 
 **Hypothesis 4:** A regression model that includes pre-processing steps (such as scaling) will perform better than a model trained on the raw data.
 
-pre-processing did not improve performance because the dataset was already clean, fully numerical, and appropriately scaled for OLS regression. Therefore, the baseline and pipeline models perform equivalently, and Hypothesis 4 is not supported.
+Pre-processing did not improve performance because the dataset was already clean, fully numerical, and appropriately scaled for OLS regression. Therefore, the baseline and pipeline models perform equivalently, and Hypothesis 4 is not supported.
 
 ## Credits
 
-A huge source of help for this project was the code institute LMS. It was particularly helpful to follow through the the machine learning section. I gathered information on how to construct a pipeline and the steps to take to evaluate its results.
+A huge source of help for this project was the Code Institute LMS. It was particularly helpful to follow through the machine learning section. I gathered information on how to construct a pipeline and the steps to take to evaluate its results.
 
 There are some sections of my code which I copied directly from the LMS, and I have referenced this in comments where I have done this. I will also list them here:
 
 -   Removing the duplicate side from a correlation heatmap whilst testing hypothesis 1
--   The code to display the histogram and boxplot whilst investigating hypotheses 3. This is lifted straight from the LMS, it provides a dotted red line to show the mean value for each group - easier to directly compare whilst plotting a box plot on the side.
+-   The code to display the histogram and boxplot whilst investigating hypotheses 3. This is lifted straight from the LMS, it provides a dotted red line to show the mean value for each group - easier to directly compare whilst plotting a boxplot on the side.
 
 Useful websites:
 
@@ -242,7 +242,7 @@ Useful websites:
 -   Documentation page for seaborn when picking a colour for the correlation heatmap that would help pick out the differences between high and low correlation.
 -   Streamlit website for how to do metrics https://docs.streamlit.io/develop/api-reference/data/st.metric
 
-Chat GPT has been helpful along the way in many ways, but I will list the main ways I have been using it below:
+ChatGPT has been helpful along the way in many ways, but I will list the main ways I have been using it below:
 
 Note: I told it not to show me code, just to ask me questions and give me hints, because I wanted to learn how everything works, not just copy generated code. I found this to be successful as it felt like a course mentor.
 
@@ -253,8 +253,8 @@ Note: I told it not to show me code, just to ask me questions and give me hints,
 
 ### Content
 
--   Code institute LMS provided some code chunks, these are referenced in the jupyter notebooks
+-   Code Institute LMS provided some code chunks, these are referenced in the jupyter notebooks
 
 ## Acknowledgements (optional)
 
--   Thanks to Emma, my coursemates and the code institute instructors.
+-   Thanks to Emma, my coursemates and the Code Institute instructors.
