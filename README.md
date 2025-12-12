@@ -201,6 +201,32 @@ Users can explore the data, interact with visualisations, and navigate between p
 
 ## Conclusions
 
+**Hypothesis 1:** Average internal test score is more strongly correlated with final exam mark than attendance.
+
+Average internal test score shows a much stronger positive relationship with final exam marks than attendance. Both the scatter plots and the correlation heatmap confirm this: test scores are far more closely aligned with final exam performance, while attendance shows only a weak association.
+
+Hypothesis 1 is supported — prior academic performance is a stronger predictor of final exam outcomes than attendance.
+
+**Hypothesis 2:** Average internal test scores (prior academic performance) explain more variance in final exam marks than engagement based behaviours, such as attendance, assignment score, and daily study hours.
+
+Two regression models were fitted to evaluate the hypothesis:
+
+Model 1 used only Average Test Score to predict final exam marks.
+Model 2 included all engagement behaviours (attendance, assignment score, daily study hours) plus Average Test Score.
+R² shows how much of the variance in final exam marks each model explains. Model 1 already explains a large amount of the variance, and adding engagement behaviours in Model 2 increases R² further. This indicates that engagement contributes something extra, but not as strongly as prior academic performance.
+
+The bar chart shows the relative size of the coefficients in Model 2. A larger coefficient means a stronger influence on the prediction. Average Test Score has the largest coefficient by a wide margin, demonstrating that it is the most important predictor of final exam marks.
+
+Overall, these results support the hypothesis that prior academic performance explains more variance in final exam outcomes than engagement-based behaviours.
+
+**Hypothesis 3:** Students studying for more than 3 hours per day have significantly higher final exam marks than those who study 3 hours or fewer.
+
+Students who study more than 3 hours per day tend to achieve higher final exam marks. The difference between the two groups is statistically significant because p value is less than 0.05 Students who study >3 hours/day score higher about 76% of the time compared to those studying ≤3 hours/day.
+
+**Hypothesis 4:** A regression model that includes preprocessing steps (such as scaling) will perform better than a model trained on the raw data.
+
+Preprocessing did not improve performance because the dataset was already clean, fully numerical, and appropriately scaled for OLS regression. Therefore, the baseline and pipeline models perform equivalently, and Hypothesis 4 is not supported.
+
 ## Credits
 
 A huge source of help for this project was the code institute LMS. It was particularly helpful to follow through the the machine learning section. I gathered information on how to construct a pipeline and the steps to take to evaluate its results.
@@ -227,14 +253,7 @@ Note: I told it not to show me code, just to ask me questions and give me hints,
 
 ### Content
 
--   The text for the Home page was taken from Wikipedia Article A
--   Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
--   The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
--   The photos used on the home and sign-up page are from This Open-Source site
--   The images used for the gallery page were taken from this other open-source site
+-   Code institute LMS provided some code chunks, these are referenced in the jupyter notebooks
 
 ## Acknowledgements (optional)
 
