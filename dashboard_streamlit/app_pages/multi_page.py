@@ -1,5 +1,5 @@
 import streamlit as st
-st.write("App loaded ✅")
+
 # Define a class for managing multiple pages in a Streamlit app
 class MultiPage:
 
