@@ -33,12 +33,12 @@ I will validate this by comparing correlation coefficients for:
 **Hypothesis 3:** Students studying for more than 3 hours per day have significantly higher final exam marks than those who study 3 hours or fewer.
 
 -   The dataset will be split into two groups based on daily study time.
--   The distributions of final exam marks will be be compared for these two groups to determine if there is a statistically significiant difference.
+-   The distributions of final exam marks will be be compared for these two groups to determine if there is a statistically significant difference.
 -   Both groups data will be checked for normality. If they are normally distributed then a t-test will be used, if not then a Mann-Whitney U test is applicable.
 
-**Hypothesis 4:** A regression model that includes preprocessing steps (such as scaling) will perform better than a model trained on the raw data.
+**Hypothesis 4:** A regression model that includes pre-processing steps (such as scaling) will perform better than a model trained on the raw data.
 
--   A basic linear regression model will be trained on the raw dataset with no preprocessing.
+-   A basic linear regression model will be trained on the raw dataset with no pre-processing.
 
 -   A second model will be trained using a full regression pipeline that includes scaling.
 
@@ -52,8 +52,8 @@ I will validate this by comparing correlation coefficients for:
 -   I want to know what effect studying has on their results so I intend to split pupils into a high study group and a low study group
 -   I will then use linear regression as a predictive model.
 -   Regression will also give me an idea of which factors have the biggest effect on final exam marks.
--   I also would like to practice building an ML pipeline, so my plan is to build a pipeline version and compare it to a non-pipeline to see which perfoms better.
--   I also want to gain skills in building a streamlit app so I will be doing this to build the dashboard.
+-   I also would like to practice building an ML pipeline, so my plan is to build a pipeline version and compare it to a non-pipeline to see which performs better.
+-   I also want to gain skills in building a Streamlit app so I will be doing this to build the dashboard.
 
 ## The rationale to map the business requirements to the Data Visualisations
 
@@ -94,9 +94,9 @@ This project involves a range of different analysis techniques:
 -   Data cleaning, checking for null values and duplicate rows
 -   Feature engineering, average test scores column and categorisation of pupils into high and low study groups
 -   Assessing data distribution with histograms
--   Using scatter charts to assess correlaion between features
+-   Using scatter charts to assess correlation between features
 -   Assessing correlation using both Pearson and Spearman techniques and visualising these in correlation heatmaps
--   Using the Mann-Whiteney U statistical test to assess the difference between two groups
+-   Using the Mann-Whitney U statistical test to assess the difference between two groups
 -   Performing linear regression and increasing the complexity of the model by building a pipeline
 
 A limiting factor of the dataset is its size. A larger dataset could have given more interesting and robust insights.
@@ -115,25 +115,25 @@ I also prompted chat GPT not to show me any code, but to act as a tutor/mentor a
 ## Ethical considerations
 
 -   This dataset was synthetic, so none of the data were related to any real pupils.
--   Despite this I removed the student ID tag as this would be good practice with a real dataset in order to annonomyse the data.
+-   Despite this I removed the student ID tag as this would be good practice with a real dataset in order to anonymise the dataset.
 
 ## Dashboard Design
 
 -   List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
     Dashboard page 1:
--   Overview of the dataset, button which allows the user to view the dataset. Includes a slider to select the number of rows visable and a filter that allows for selection of columns.
+-   Overview of the dataset, button which allows the user to view the dataset. Includes a slider to select the number of rows visible and a filter that allows for selection of columns.
 -   Basic metrics that summarise the data columns at the top
 -   Histograms to show data distributions with a drop down list that allows you to select different columns
 
 Dashboard page 2:
 
--   Hypothesis 1 including plotly scatter graphs and correlation heatmap
+-   Hypothesis 1 including Plotly scatter graphs and correlation heatmap
 -   Conclusions
 
-Hasboard page 3:
+Dasboard page 3:
 
--   Hypothesis 2 inclusing R² and RMSE values for the two different models
--   Barchart to show the coefficients demonstrating which factor had the biggest impact on the final mark prediction.
+-   Hypothesis 2 including R² and RMSE values for the two different models
+-   Bar chart to show the coefficients demonstrating which factor had the biggest impact on the final mark prediction.
 -   Conclusions
 
 Dashboard page 4:
@@ -148,7 +148,7 @@ Dashboard page 5:
 -   conclusions
 
 Simple metrics and charts are provided which are easy and clear to interpret. This allows for non-technical audience to gain useful insight from this dashboard.
-High level explanaion and conclusions provide technical insight for interested parties. Technical and non-technical elements found on all pages.
+High level explanation and conclusions provide technical insight for interested parties. Technical and non-technical elements found on all pages.
 
 ## Unfixed Bugs
 
@@ -157,11 +157,11 @@ At the beginning of the project there were 3 things I wanted to work on because 
 
 -   Statistics
 -   Machine learning
--   Dashboard design using streamlit
+-   Dashboard design using Streamlit
 
-To get to grips with both statistics and machine learning recapped the code institute LMS pages and focused on the steps taken there to understand how to apply this to my project. For streamlit I used the streamlit website https://docs.streamlit.io/ as a resource to find different widget options and learn how they work.
+To get to grips with both statistics and machine learning recapped the code institute LMS pages and focused on the steps taken there to understand how to apply this to my project. For Streamlit I used the Streamlit website https://docs.streamlit.io/ as a resource to find different widget options and learn how they work.
 
-Towards the end of the project I was using the sci kit learn selectfrommodel function to select features for the ML model to be trained. When the model gave some odd results I asked chat GPT to evaluate my pipeline. It informed me that I should be using Lasso linear regression rather than the basic linear regression. This was a gap in my knowledge and going forward I would like to gain more understanding of when and why to use different algorithms.
+Towards the end of the project I was using the sci kit learn SelectFromModel function to select features for the ML model to be trained. When the model gave some odd results I asked chat GPT to evaluate my pipeline. It informed me that I should be using Lasso linear regression rather than the basic linear regression. This was a gap in my knowledge and going forward I would like to gain more understanding of when and why to use different algorithms.
 
 ## Development Roadmap
 
@@ -192,8 +192,8 @@ Users can explore the data, interact with visualisations, and navigate between p
 
 ## Main Data Analysis Libraries
 
--   **Pandas:** used throughout this project, in essential data analysis tasks such as: reading data into dataframes, adding new features as columns, dropping columns, changing datatypes, checking for null values and duplicates.
--   **Matplotlib:** foundation for most visualisations, useful for seetting chart titles and displaying the charts.
+-   **Pandas:** used throughout this project, in essential data analysis tasks such as: reading data into data frames, adding new features as columns, dropping columns, changing datatypes, checking for null values and duplicates.
+-   **Matplotlib:** foundation for most visualisations, useful for setting chart titles and displaying the charts.
 -   **Seaborn:** to make visually appealing charts to assess: distributions of results, the correlation between different variables in a correlation heatmap, and a pairplot to get a feel for all of the data.
 -   **Numpy:** foundation for all data manipulation but specifically used to take the square root of the mean squared error for the regression model.
 -   **Plotly:** to make interactive scatterplots to demonstrate the relationship between two parameters for hypothesis 1.
@@ -223,9 +223,9 @@ Overall, these results support the hypothesis that prior academic performance ex
 
 Students who study more than 3 hours per day tend to achieve higher final exam marks. The difference between the two groups is statistically significant because p value is less than 0.05 Students who study >3 hours/day score higher about 76% of the time compared to those studying ≤3 hours/day.
 
-**Hypothesis 4:** A regression model that includes preprocessing steps (such as scaling) will perform better than a model trained on the raw data.
+**Hypothesis 4:** A regression model that includes pre-processing steps (such as scaling) will perform better than a model trained on the raw data.
 
-Preprocessing did not improve performance because the dataset was already clean, fully numerical, and appropriately scaled for OLS regression. Therefore, the baseline and pipeline models perform equivalently, and Hypothesis 4 is not supported.
+pre-processing did not improve performance because the dataset was already clean, fully numerical, and appropriately scaled for OLS regression. Therefore, the baseline and pipeline models perform equivalently, and Hypothesis 4 is not supported.
 
 ## Credits
 
