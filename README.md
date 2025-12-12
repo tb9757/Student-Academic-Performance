@@ -2,6 +2,10 @@
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+# Link to streamlit app
+
+https://student-academic-performance-tisk4bvfc4vqsidub7n5fx.streamlit.app/
+
 ## Dataset Content
 
 -   This is a synthetic dataset containing student academic metrics for 2000 individual pupils. The dataset includes attendance, internal exam scores, assignment performance, daily study habits, and final exam marks.
