@@ -103,6 +103,8 @@ A limiting factor of the dataset is its size. A larger dataset could have given 
 
 I also felt limited by the synthetic nature of the dataset. The dataset has been designed to be a teaching tool to help understand and practice linear regression. Any conclusions made are valid but maybe not as interesting as if the dataset was actual pupil data. This would have created more complex privacy issues and it is perfectly understandable that this kind of data is not made available to the public.
 
+More interesting analysis could have been done if the dataset also contained more columns. More information about the pupils, maybe about their background, their parents other factors that may have an impact on their final exam marks. As it is the information is fairly limited.
+
 The techniques in this project could be used on real data by a school or an organisation and the results would provide meaningful and useful information with regards to the business requirements I have outlined.
 
 Use generative AI tools:
