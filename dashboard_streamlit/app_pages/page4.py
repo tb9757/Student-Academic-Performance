@@ -17,8 +17,6 @@ def page4_body():
     st.subheader("Students studying for more than 3 hours per day "
                  "have significantly higher final exam marks than "
                  "those who study 3 hours or fewer.")
-    df = pd.read_csv('../data/academic_performance_cleaned.csv')
-
     st.markdown("")
     df_pivot = pd.pivot(df.drop(columns=['Attendance (%)',
                                          'Internal Test 1 (out of 40)',
