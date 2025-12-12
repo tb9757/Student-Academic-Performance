@@ -10,7 +10,6 @@ def page1_body():
     """
     This function displays the content of Page one.
     """
-    # df = pd.read_csv('../data/academic_performance_cleaned.csv')
     BASE_DIR = Path(__file__).resolve().parents[2]
     DATA_PATH = BASE_DIR / "data" / "academic_performance_cleaned.csv"
 

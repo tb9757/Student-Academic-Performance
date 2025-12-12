@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from pathlib import Path
 import plotly.express as px
 import seaborn as sns
 import streamlit as st
@@ -10,11 +11,12 @@ def page2_body():
     """
     This function displays the content of Page one.
     """
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    DATA_PATH = BASE_DIR / "data" / "academic_performance_cleaned.csv"
+    df = pd.read_csv(DATA_PATH)
     st.header('Hypothesis 1:')
     st.subheader('Average internal test score is more strongly correlated '
                  'with final exam mark than attendance.')
-    df = pd.read_csv('../data/academic_performance_cleaned.csv')
-
     st.markdown('This hypothesis compares importance of being '
                 'consistently in school versus performing well in '
                 'internal assessments. It is comparing engagement '

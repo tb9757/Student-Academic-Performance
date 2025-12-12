@@ -11,8 +11,6 @@ def page3_body():
     st.subheader('Average internal test scores explain more variance in '
                  'final exam marks than engagement based behaviours, such '
                  'as attendance, assignment score, and daily study hours.')
-    # df = pd.read_csv('../data/academic_performance_cleaned.csv')
-
     st.markdown("""To test this hypothesis I used two linear regression models.
                 Model 1 used only Average Test Score to predict Final Exam
                 Marks. Model 2 included the engagement behaviours as

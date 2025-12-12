@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from pathlib import Path
 import pingouin as pg
 import seaborn as sns
 import streamlit as st
@@ -9,6 +10,9 @@ def page4_body():
     """
     This function displays the content of Page four.
     """
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    DATA_PATH = BASE_DIR / "data" / "academic_performance_cleaned.csv"
+    df = pd.read_csv(DATA_PATH)
     st.header('Hypothesis 3:')
     st.subheader("Students studying for more than 3 hours per day "
                  "have significantly higher final exam marks than "
@@ -42,7 +46,7 @@ def page4_body():
                 Visually it seems that the high study hours group
                 achieved a higher final mark.
                 """)
-    st.markdown("""This can be tested statistically, in this case by 
+    st.markdown("""This can be tested statistically, in this case by
                 using the Mann-Whitney U test. This test was chosen
                 due to the lack of normality in these data. This test can
                 tell us if the groups are statistically different.
@@ -52,15 +56,15 @@ def page4_body():
 
     u_val = mwu_results['U-val'].iloc[0]
     p_val = mwu_results['p-val'].iloc[0]
-    rbc   = mwu_results['RBC'].iloc[0]
-    cles  = mwu_results['CLES'].iloc[0]
+    rbc = mwu_results['RBC'].iloc[0]
+    cles = mwu_results['CLES'].iloc[0]
 
     st.subheader("Hypothesis 3: Study Hours and Final Exam Marks")
 
     with st.container():
         st.markdown(
             "Comparing **> 3 hours/day** vs **≤ 3 hours/day** using a "
-            "*Mann–Whitney U test*."
+            "*Mann-Whitney U test*."
         )
 
         col1, col2, col3, col4 = st.columns(4)
