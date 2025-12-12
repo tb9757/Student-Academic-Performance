@@ -165,9 +165,9 @@ Towards the end of the project I was using the sci kit learn selectfrommodel fun
 
 -   What challenges did you face, and what strategies were used to overcome these challenges?
 
-initially thought the distributions were normal because of small skew values. when checked for normality later they were found not to be normal so had to switch from pearson to spearman, and had to do a new correlation heatmap (left the old one in)
+Initially I thought that the distributions were normal because of small skew values. Later when I checked for normality I found the distributions not to be normal. I had to switch the statistical test I had done to work out the correlation coefficients for H1. I also had to make a new correlation heatmap. I left both in to show my working process and as you can see it made little difference in the end.
 
-feature selection dropping all of the features, so swiitching to lasso
+During the feature selection section of my pipeline it dropped all the features bar one. This made the model worse at predicting and I wasn't sure why this was. I consulted with chat GPT and it suggested that I swiitching to the lasso method of feature selection because it gave a more realistic view of which features were contributing in a meaningful way.
 
 -   What new skills or tools do you plan to learn next based on your project experience?
 
