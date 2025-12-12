@@ -1,7 +1,5 @@
 # Student Academic Performance
 
-**Student Academic Performance** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
-
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Dataset Content
@@ -59,10 +57,39 @@ I will validate this by comparing correlation coefficients for:
 
 ## The rationale to map the business requirements to the Data Visualisations
 
--   Understanding what impact different pupil behaviour has on their outcomes in school would be a very useful thing for a school to have
--   Predicting pupil results is also an important tool for schools. It allows them to know which pupils to focus on and where to concentrate their efforts
+To ensure that each business requirement could be answered clearly and supported by evidence, appropriate data visualisations were selected based on the type of insight required.
+
+Business Requirement 1
+
+The school needs to understand whether final exam performance can be predicted using available student data.
+
+This requirement focuses on predictability and overall model performance. It was addressed using:
+
+-   Scatter plots with trendlines, to visually assess linear relationships between final exam marks and key predictors such as attendance, study hours, and internal test scores.
+
+-   Correlation heatmaps, to summarise the strength and direction of relationships across all numerical variables and identify which features are most strongly associated with final exam performance.
+
+-   Regression model performance metrics (R² and RMSE), displayed visually, to quantify how well final exam marks can be predicted using the available data.
+
+Together, these visualisations allow stakeholders to understand both whether prediction is feasible and how accurate those predictions are, supporting early identification of students at risk of underperforming.
+
+Business Requirement 2
+
+The school would like to determine which factors have the biggest influence on high final exam marks.
+
+This requirement focuses on explanation and prioritisation rather than prediction alone. It was addressed using:
+
+-   Regression coefficient visualisations, to show the relative contribution of each predictor variable to final exam marks in an interpretable way.
+
+-   Comparative plots and grouped distributions, to visually compare outcomes across different engagement and study behaviour levels.
+
+-   Model comparison metrics, to demonstrate how including academically relevant features (such as internal test scores) improves explanatory power compared to engagement-only models.
+
+These visualisations support evidence-based decision-making by highlighting which factors contribute most strongly to high performance, helping inform school-wide strategies and resource allocation.
 
 ## Analysis techniques used
+
+This project involves a
 
 -   List the data analysis methods used and explain limitations or alternative approaches.
 -   How did you structure the data analysis techniques. Justify your response.
