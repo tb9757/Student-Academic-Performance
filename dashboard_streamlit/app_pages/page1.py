@@ -1,17 +1,21 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from pathlib import Path
 import seaborn as sns
 import streamlit as st
 sns.set_style('whitegrid')
-
-# import numpy as np
 
 
 def page1_body():
     """
     This function displays the content of Page one.
     """
-    df = pd.read_csv('../data/academic_performance_cleaned.csv')
+    # df = pd.read_csv('../data/academic_performance_cleaned.csv')
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    DATA_PATH = BASE_DIR / "data" / "academic_performance_cleaned.csv"
+
+    df = pd.read_csv(DATA_PATH)
+
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric('Pupils', len(df))
     col2.metric('Mean Final Score (%)',
