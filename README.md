@@ -110,10 +110,6 @@ I have found chat GPT to be useful throughout this project. Particularly in hypo
 
 I also prompted chat GPT not to show me any code, but to act as a tutor/mentor and ask questions and give hints. I found this really helpful because I didn't want to fall into the trap of just copying code from AI and not understanding what the code does.
 
-visualisation types
-stats / hypothesis testing
-machine learning linear regression
-
 ## Ethical considerations
 
 -   This dataset was synthetic, so none of the data were related to any real pupils.
@@ -128,10 +124,16 @@ machine learning linear regression
 
 ## Unfixed Bugs
 
--   Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
--   Did you recognise gaps in your knowledge, and how did you address them?
-    Swapping linear regression for lasso - didn't fully understand why, have added a description from gpt
--   If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+Currently no known bugs in the code.
+At the beginning of the project there were 3 things I wanted to work on because I felt my understanding of them could be improved:
+
+-   Statistics
+-   Machine learning
+-   Dashboard design using streamlit
+
+To get to grips with both statistics and machine learning recapped the code institute LMS pages and focused on the steps taken there to understand how to apply this to my project. For streamlit I used the streamlit website https://docs.streamlit.io/ as a resource to find different widget options and learn how they work.
+
+Towards the end of the project I was using the sci kit learn selectfrommodel function to select features for the ML model to be trained. When the model gave some odd results I asked chat GPT to evaluate my pipeline. It informed me that I should be using Lasso linear regression rather than the basic linear regression. This was a gap in my knowledge and going forward I would like to gain more understanding of when and why to use different algorithms.
 
 ## Development Roadmap
 
